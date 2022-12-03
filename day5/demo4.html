@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <form action="">
+            <!-- autofocus: là ô có thể nhập liệu, mỗi form chỉ có một autofocus -->
+            <!-- mỗi thẻ chỉ có một id, không được trùng id -->
+            <tr>
+                <td>Name:</td>
+                <td><input type="text" onfocus="focusName(this)" onblur="blurName(this)"></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="email" onfocus="focusName(this)" onblur="blurName(this)"></td>
+            </tr>
+            <tr>
+                <td>Age:</td>
+                <td><input type="number" onfocus="focusName(this)" onblur="blurName(this)"></td>
+            </tr>
+        </form>
+    </table>
+    <script>
+        function focusName(obj){
+            obj.style.backgroundColor = "yellow";
+        }
+        function blurName(obj){
+            obj.style.backgroundColor = "white";
+        }
+    </script>
+</body>
+</html>

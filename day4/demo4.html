@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input:required{
+            outline: 1px red solid;
+        }
+    </style>
+</head>
+<body>
+    <!-- form là thẻ dùng để nhập liệu -->
+    <form action="demo1.html">
+        Name: <input type="text" required readonly value="Nguyen Van A"><br>
+        <!-- Khi có readonly thì tự động required tự biến mất -->
+        Password: <input type="password" required><br>
+        <!-- hidden dùng để biến mất thẻ -->
+        Email: <input type="email" hidden><br>
+        <!-- Chỉ nhận số trong khoảng min max -->
+        Age: <input type="number" min="18" max="60"><br>
+        <!-- radio -->
+        Gender: <input type="radio" name="gender"/>Male 
+        <input type="radio" name="gender"/>Female 
+        <input type="radio" name="gender"/>Other<br>
+        Hobby: <input type="checkbox">Male 
+        <input type="checkbox">Female 
+        <input type="checkbox">Other<br>
+        City: <select>
+            <option>Ha Noi</option>
+            <option>Hue</option>
+            <option>Da Nang</option>
+            <option>Nha Trang</option>
+            <option>Sai Gon</option>
+            <option>Hai Phong</option>
+        </select> <br>
+        Birthday: <input type="date"> <br>
+        Comment: <textarea rows="5" cols="20"></textarea><br>
+        <input type="submit" value="Lognin"><br>
+        <input type="reset" value="Reset">
+    </form>
+</body>
+</html>

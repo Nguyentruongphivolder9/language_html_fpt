@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            text-align: center;
+            padding: 10px;
+        }
+        .container_logo{
+            margin-bottom: 15px;
+        }
+        .container_table{
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 15px;
+            padding: 2px;
+            width: 400px;
+            border: 2px solid black;
+        }
+        .title_size_table{
+            font-size: 25px;
+            background-color: darkslategrey;
+            color: white;
+        }
+        table{
+            margin-left: auto;
+            margin-right: auto;
+        }
+        a{
+            padding: 20px;
+            font-size: 20px;
+            text-decoration: none;
+        }
+        a:hover{
+            background-color: aqua;
+            padding: 20px;
+        }
+        .size_text_logo{
+            font-weight: 600;
+            margin-left: 3px;
+            font-size: 25px;
+        }
+        .name{
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="container_logo">
+            <img src="image/logo_lagi_8_resize.jpg" alt="" width="20px" height="20px">
+            <span class="size_text_logo">SOFTING</span>
+        </div>
+        <div>
+            <table>
+                <tr>
+                    <td><a href="">HOME</a></td>
+                    <td><a href="">ABOUT</a></td>
+                    <td><a href="">FEATURE</a></td>
+                    <td><a href="">OVERVIEW</a></td>
+                    <td><a href="">PRICING</a></td>
+                    <td><a href="">TEAM</a></td>
+                    <td><a href="">CONTACT</a></td>
+                </tr>
+            </table>
+        </div>
+        <div class="container_table">
+            <div class="title_size_table">Create A New Account</div>
+            <table>
+                <form action="demo2.html">
+                    <tr>
+                        <td class="name">First name</td>
+                        <td><input type="text" id="firstname"></td>
+                    </tr>
+                    <tr>
+                        <td class="name">Email</td>
+                        <td><input type="email" id="email"></td>
+                    </tr>
+                    <tr>
+                        <td class="name">Confirm Email</td>
+                        <td><input type="email" id="cemail"></td>
+                    </tr>
+                    <tr>
+                        <td class="name">Password</td>
+                        <td><input type="password" id="password"></td>
+                    </tr>
+                    <tr>
+                        <td class="name">Confirm Password</td>
+                        <td><input type="password" id="cpassword"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input type="checkbox">Yes sign me up</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input type="submit" value="Create Account" onclick="checkForm()"></td>
+                    </tr>
+                </form>
+            </table>
+        </div>
+    </div>
+    <script>
+        function checkForm() {
+            var fname = document.getElementById("firstname").value;
+            var email = document.getElementById("email").value;
+            var cemail = document.getElementById("cemail").value;
+            var password = document.getElementById("password").value;
+            var cpassword = document.getElementById("cpassword").value;
+            if(!fname || !email || !password || !cemail || !cpassword) {
+                alert("Information can not blank");
+            } else if(cemail != email) {
+                alert("Email must be the same as Confirm email");
+            } else if(cpassword != password) {
+                alert("Password must be the same as Confirm password");
+            } else if(password.length < 6){
+                alert("Password must be more than 5 characters")
+            } else if(fname.length < 3){
+                alert("First name must be more than 2 characters")
+            }
+        }
+    </script>
+</body>
+</html>

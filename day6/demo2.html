@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td{
+            background-color: #8a2be2;
+            border: 1px solid white;
+            padding: 8px;
+        }
+        .br_read{
+            background-color: blanchedalmond;
+        }
+        input{
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <form action="">
+            <tr><td colspan="2"><h1>REGISTER FORM</h1></td></tr>
+            <tr>
+                <td rowspan="2">Name</td>
+                <td><input type="text" id="name" onkeyup="inputname()"></td>
+            </tr>
+            <tr>
+                <td><input type="text" placeholder="Welcome" readonly class="br_read" id="welcome"></td>
+            </tr>
+            <tr>
+                <td>Job</td>
+                <td>
+                    <select id="job" onchange="jobSalary()">
+                        <option value="0">[........]</option>
+                        <option value="1">Manager</option>
+                        <option value="2">Accountant</option>
+                        <option value="3">Saleman</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Salary</td>
+                <td><input type="number" class="br_read" id="idSalary" readonly></td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>Mobile</td>
+                <td><input type="number" maxlength="10"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit">
+                    <input type="reset">
+                </td>
+            </tr>
+        </form>
+    </table>
+    <script>
+        function inputname(){
+            var name = document.getElementById("name").value;
+            document.getElementById("welcome").value = "Welcome " + name;
+        }
+        function jobSalary(){
+            var job = document.getElementById("job").value;
+            if(job == "0"){
+                document.getElementById("idSalary").value = 0;
+            } else if (job == "1") {
+                document.getElementById("idSalary").value = 1000;
+            } else if (job == "2") {
+                document.getElementById("idSalary").value = 500;
+            } else {
+                document.getElementById("idSalary").value = 1500;
+            }
+        }
+    </script>
+</body>
+</html>

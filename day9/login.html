@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="index.html" onsubmit="getSession()">
+        <div>Username: <input type="text" id="username"></div>
+        <div><input type="submit"></div>
+    </form>
+    <script>
+        function getSession() {
+            var uname = document.getElementById("username").value;
+            // uname: là biến của trang login
+            // setItem: 
+            sessionStorage.setItem("tenDangNhap", uname);
+            // tenDangNhap: là biến của session, bất kì trang nào củng có thể đọc được
+        }
+    </script>
+</body>
+</html>

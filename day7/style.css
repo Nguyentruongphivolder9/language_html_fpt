@@ -1,0 +1,56 @@
+.main_container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+}
+h1{
+    color: brown;
+}
+table{
+    margin-left: auto;
+    margin-right: auto;
+}
+span{
+    margin-left: 30px;
+    font-size: 20px;
+}
+.menu_container {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.container_text1{
+    width: 140px;
+}
+.container_text2, .container_text1{
+    font-size: 20px;
+    color: white;
+    background-color: brown;
+}
+img{
+    object-fit: cover;
+}
+.font_title{
+    margin-bottom: 15px;
+    color: rgb(200, 77, 10);
+    font-size: 45px;
+    font-weight: 600;
+}
+.table_contact_us{
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    padding: 15px;
+    background-color: orange;
+}
+.comment{
+    height: 60px;
+}
+.container_table_contact{
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+}

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="angular.min.js"></script>
+</head>
+<body>
+    <h2>ng-show/ng-hide demo</h2>
+    <hr>
+    <div ng-app ng-init="show=true;hide=false;">
+        <p>Show the picture <input type="checkbox" ng-model="show"></p>
+        <img src="tree-736885__480 copy.jpg" ng-show="show" width="150px" height="100px">
+        <p>Show the picture <input type="checkbox" ng-model="hide"></p>
+        <img src="download.jpg" ng-hide="hide" width="150px" height="100px">
+    </div>
+</body>
+</html>
